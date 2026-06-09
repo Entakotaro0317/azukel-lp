@@ -70,21 +70,39 @@
     .header-btn { padding: 10px 24px; font-size: 14px; }
 
     /* ── hero ── */
-    .hero { position: relative; min-height: 92vh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+    .hero {
+      position: relative; min-height: 92vh; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    /* 女性写真：右側に寄せて配置 */
     .hero-bg {
       position: absolute; inset: 0;
-      background: url('assets/images/fv/woman.webp') center/cover no-repeat;
+      background: url('assets/images/fv/woman.webp') right center / cover no-repeat;
     }
+    /* 左から濃い緑→透明グラデーション（右側の女性を見せる） */
     .hero-bg::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(to right, rgba(0,0,0,.72) 0%, rgba(0,0,0,.45) 55%, rgba(0,0,0,.10) 100%);
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(2,40,18,.93) 0%,
+        rgba(2,40,18,.82) 30%,
+        rgba(2,40,18,.45) 55%,
+        rgba(0,0,0,.05)   80%,
+        transparent       100%
+      );
     }
-    .hero-content {
-      position: relative; z-index: 1;
-      max-width: 1080px; margin: 0 auto; width: 100%;
-      padding: 0 28px 72px;
+    /* 2カラムグリッド */
+    .hero-inner {
+      position: relative; z-index: 2;
+      max-width: 1160px; margin: 0 auto; width: 100%;
+      padding: 72px 40px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      align-items: center;
+      gap: 48px;
+      min-height: 92vh;
     }
+    .hero-text {}
     .hero-badge {
       display: inline-flex; align-items: center; gap: 7px;
       background: var(--green); color: #fff;
@@ -92,15 +110,15 @@
       font-size: 13px; font-weight: 700; margin-bottom: 20px;
     }
     .hero-h1 {
-      font-size: 52px; font-weight: 900; color: #fff;
-      line-height: 1.3; margin-bottom: 22px;
+      font-size: 48px; font-weight: 900; color: #fff;
+      line-height: 1.35; margin-bottom: 22px;
     }
     .hero-h1 em { font-style: normal; color: #4CFF8A; }
-    .hero-sub { font-size: 18px; color: rgba(255,255,255,.82); line-height: 1.8; margin-bottom: 32px; }
-    .hero-checks { display: flex; flex-direction: column; gap: 11px; margin-bottom: 40px; }
+    .hero-sub { font-size: 17px; color: rgba(255,255,255,.82); line-height: 1.85; margin-bottom: 30px; }
+    .hero-checks { display: flex; flex-direction: column; gap: 11px; margin-bottom: 38px; }
     .hero-check {
       display: flex; align-items: center; gap: 10px;
-      font-size: 16px; color: #fff; font-weight: 500;
+      font-size: 15px; color: #fff; font-weight: 500;
     }
     .check-dot {
       width: 22px; height: 22px; flex-shrink: 0;
@@ -109,23 +127,150 @@
       font-size: 11px; color: #fff;
     }
     .hero-cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-    .hero-btn { padding: 18px 48px; font-size: 18px; box-shadow: 0 6px 24px rgba(255,107,0,.45); }
+    .hero-btn { padding: 18px 48px; font-size: 17px; box-shadow: 0 6px 24px rgba(255,107,0,.45); }
     .hero-note { font-size: 13px; color: rgba(255,255,255,.6); }
 
     /* hero stats */
     .hero-stats {
       position: absolute; bottom: 0; right: 0;
       display: flex;
-      background: rgba(255,255,255,.1); backdrop-filter: blur(16px);
+      background: rgba(0,0,0,.35); backdrop-filter: blur(16px);
       border-radius: 20px 0 0 0; overflow: hidden;
     }
     .hero-stat {
-      padding: 20px 28px; text-align: center; color: #fff;
+      padding: 18px 26px; text-align: center; color: #fff;
       border-right: 1px solid rgba(255,255,255,.15);
     }
     .hero-stat:last-child { border-right: none; }
-    .hero-stat-val { font-size: 26px; font-weight: 900; color: #4CFF8A; line-height: 1.1; }
+    .hero-stat-val { font-size: 24px; font-weight: 900; color: #4CFF8A; line-height: 1.1; }
     .hero-stat-lbl { font-size: 11px; opacity: .75; margin-top: 4px; }
+
+    /* ── phone mockup ── */
+    .phone-col {
+      display: flex; justify-content: center; align-items: center;
+    }
+    .phone-wrap {
+      animation: phoneFloat 4s ease-in-out infinite;
+      filter: drop-shadow(0 32px 64px rgba(0,0,0,.55));
+    }
+    @keyframes phoneFloat {
+      0%,100% { transform: translateY(0px) rotate(-1.5deg); }
+      50%      { transform: translateY(-14px) rotate(-1.5deg); }
+    }
+    .phone {
+      width: 232px;
+      background: #111;
+      border-radius: 40px;
+      padding: 10px;
+      box-shadow:
+        0 0 0 1.5px #2a2a2a,
+        0 0 0 3px #0a0a0a,
+        inset 0 0 0 1px #444;
+      position: relative;
+    }
+    /* Dynamic Island */
+    .phone::before {
+      content: '';
+      position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+      width: 96px; height: 26px;
+      background: #111; border-radius: 13px; z-index: 10;
+    }
+    /* 側面ボタン */
+    .phone::after {
+      content: '';
+      position: absolute; right: -3px; top: 90px;
+      width: 3px; height: 52px;
+      background: #1f1f1f; border-radius: 0 2px 2px 0;
+    }
+    .phone-screen {
+      background: #fff;
+      border-radius: 31px;
+      overflow: hidden;
+      height: 468px;
+      display: flex; flex-direction: column;
+    }
+
+    /* LINE UI */
+    .line-hdr {
+      background: var(--green);
+      padding: 42px 14px 10px;
+      display: flex; align-items: center; gap: 9px;
+      color: #fff; flex-shrink: 0;
+    }
+    .line-back { font-size: 18px; opacity: .85; cursor: pointer; }
+    .line-avatar {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: #fff; overflow: hidden; flex-shrink: 0;
+    }
+    .line-avatar img { width: 100%; height: 100%; object-fit: contain; }
+    .line-name { font-size: 13px; font-weight: 700; display: block; line-height: 1.2; }
+    .line-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.25); border-radius: 4px;
+      padding: 1px 5px; font-size: 9px; font-weight: 600; margin-top: 1px;
+    }
+    .line-more { margin-left: auto; font-size: 18px; opacity: .8; }
+
+    .line-body {
+      flex: 1; overflow: hidden;
+      background: #a8d8c8;
+      padding: 10px 8px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .msg-row { display: flex; gap: 6px; align-items: flex-end; }
+    .msg-ico {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: #fff; overflow: hidden; flex-shrink: 0;
+    }
+    .msg-ico img { width: 100%; height: 100%; object-fit: contain; }
+    .msg-bubble {
+      background: #fff;
+      border-radius: 3px 12px 12px 12px;
+      padding: 7px 10px;
+      font-size: 10.5px; line-height: 1.55; color: #222;
+      max-width: 152px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    }
+    .msg-time { font-size: 9px; color: rgba(255,255,255,.7); margin-left: 4px; align-self: flex-end; }
+
+    .rich-btns { display: flex; flex-direction: column; gap: 5px; margin-left: 34px; }
+    .rich-btn {
+      background: #fff; border: 1.5px solid var(--green);
+      border-radius: 6px; padding: 6px 10px;
+      font-size: 10.5px; font-weight: 700; color: var(--green);
+      text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    }
+
+    .line-footer {
+      background: #f2f2f2; padding: 7px 10px;
+      display: flex; align-items: center; gap: 6px;
+      border-top: 1px solid #e0e0e0; flex-shrink: 0;
+    }
+    .line-input-bar {
+      flex: 1; background: #fff;
+      border: 1px solid #ddd; border-radius: 18px;
+      padding: 5px 11px; font-size: 10px; color: #bbb;
+    }
+    .line-send {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 12px; flex-shrink: 0;
+    }
+
+    .line-richmenu {
+      background: #d4ede3; flex-shrink: 0;
+      padding: 6px; display: grid;
+      grid-template-columns: repeat(3,1fr); gap: 4px;
+    }
+    .rmb {
+      background: #fff; border-radius: 7px;
+      padding: 7px 3px;
+      text-align: center; cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    }
+    .rmb-icon { font-size: 17px; display: block; margin-bottom: 2px; }
+    .rmb-label { font-size: 8.5px; font-weight: 700; color: #027A3A; }
 
     /* ── stats bar ── */
     .stats-bar { background: var(--green-dark); color: #fff; padding: 26px 28px; }
@@ -365,6 +510,8 @@
 
     /* ── responsive ── */
     @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 60px 28px; }
+      .phone-col { display: none; }
       .hero-h1 { font-size: 36px; }
       .feat-grid { grid-template-columns: 1fr 1fr; }
       .items-grid { grid-template-columns: repeat(4,1fr); }
@@ -412,21 +559,92 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-badge">📦 宅配型トランクルーム</div>
-    <h1 class="hero-h1">スマホひとつで、<br><em>荷物を預けて</em><br>部屋を広くしよう。</h1>
-    <p class="hero-sub">自宅から一歩も出ずに預けられる。<br>取り出しもLINEで依頼するだけ。</p>
-    <ul class="hero-checks">
-      <li class="hero-check"><div class="check-dot">✓</div>初期費用ゼロ・月額<strong>200円〜</strong>の業界最安級</li>
-      <li class="hero-check"><div class="check-dot">✓</div>集荷送料無料・最短<strong>翌日</strong>対応</li>
-      <li class="hero-check"><div class="check-dot">✓</div>アプリ不要・<strong>LINEだけ</strong>で完結</li>
-      <li class="hero-check"><div class="check-dot">✓</div>大型家具・家電もOK（スペースプラン）</li>
-    </ul>
-    <div class="hero-cta">
-      <a href="https://www.azukel.com/" class="btn-orange hero-btn">今すぐ無料で始める →</a>
-      <p class="hero-note">※ 登録無料・30秒で完了・クレカ不要</p>
+
+  <div class="hero-inner">
+    <!-- 左カラム：テキスト -->
+    <div class="hero-text">
+      <div class="hero-badge">📦 宅配型トランクルーム</div>
+      <h1 class="hero-h1">スマホひとつで、<br><em>荷物を預けて</em><br>部屋を広くしよう。</h1>
+      <p class="hero-sub">自宅から一歩も出ずに預けられる。<br>取り出しもLINEで依頼するだけ。</p>
+      <ul class="hero-checks">
+        <li class="hero-check"><div class="check-dot">✓</div>初期費用ゼロ・月額<strong>200円〜</strong>の業界最安級</li>
+        <li class="hero-check"><div class="check-dot">✓</div>集荷送料無料・最短<strong>翌日</strong>対応</li>
+        <li class="hero-check"><div class="check-dot">✓</div>アプリ不要・<strong>LINEだけ</strong>で完結</li>
+        <li class="hero-check"><div class="check-dot">✓</div>大型家具・家電もOK（スペースプラン）</li>
+      </ul>
+      <div class="hero-cta">
+        <a href="https://www.azukel.com/" class="btn-orange hero-btn">今すぐ無料で始める →</a>
+        <p class="hero-note">※ 登録無料・30秒で完了・クレカ不要</p>
+      </div>
     </div>
-  </div>
+
+    <!-- 右カラム：スマホモックアップ（LINE UI） -->
+    <div class="phone-col">
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+
+            <!-- LINE ヘッダー -->
+            <div class="line-hdr">
+              <span class="line-back">‹</span>
+              <div class="line-avatar"><img src="assets/images/logo.png" alt="AZUKEL"></div>
+              <div>
+                <span class="line-name">AZUKEL</span>
+                <span class="line-badge">公式BOT</span>
+              </div>
+              <span class="line-more">⋯</span>
+            </div>
+
+            <!-- チャット本文 -->
+            <div class="line-body">
+              <!-- bot msg 1 -->
+              <div class="msg-row">
+                <div class="msg-ico"><img src="assets/images/logo.png" alt=""></div>
+                <div>
+                  <div class="msg-bubble">こんにちは！📦<br>AZUKELへようこそ。<br>どちらのプランを<br>ご希望ですか？</div>
+                </div>
+                <span class="msg-time">11:23</span>
+              </div>
+
+              <!-- 選択ボタン -->
+              <div class="rich-btns">
+                <div class="rich-btn">📦 箱プラン（全国対応）</div>
+                <div class="rich-btn">🏠 スペースプラン（一都三県）</div>
+              </div>
+
+              <!-- bot msg 2 -->
+              <div class="msg-row">
+                <div class="msg-ico"><img src="assets/images/logo.png" alt=""></div>
+                <div>
+                  <div class="msg-bubble">集荷日時を<br>選んでください📅<br><strong style="color:#06C755;">最短 明日</strong>から対応！</div>
+                </div>
+                <span class="msg-time">11:24</span>
+              </div>
+            </div>
+
+            <!-- 入力バー -->
+            <div class="line-footer">
+              <span style="font-size:16px;">＋</span>
+              <div class="line-input-bar">メッセージを入力</div>
+              <div class="line-send">▶</div>
+            </div>
+
+            <!-- リッチメニュー -->
+            <div class="line-richmenu">
+              <div class="rmb"><span class="rmb-icon">📦</span><span class="rmb-label">集荷依頼</span></div>
+              <div class="rmb"><span class="rmb-icon">📬</span><span class="rmb-label">取り出し</span></div>
+              <div class="rmb"><span class="rmb-icon">🖼️</span><span class="rmb-label">荷物一覧</span></div>
+              <div class="rmb"><span class="rmb-icon">💴</span><span class="rmb-label">料金確認</span></div>
+              <div class="rmb"><span class="rmb-icon">🚚</span><span class="rmb-label">配送状況</span></div>
+              <div class="rmb"><span class="rmb-icon">💬</span><span class="rmb-label">問い合わせ</span></div>
+            </div>
+
+          </div><!-- /phone-screen -->
+        </div><!-- /phone -->
+      </div><!-- /phone-wrap -->
+    </div><!-- /phone-col -->
+  </div><!-- /hero-inner -->
+
   <div class="hero-stats">
     <div class="hero-stat"><div class="hero-stat-val">¥200〜</div><div class="hero-stat-lbl">月額保管料</div></div>
     <div class="hero-stat"><div class="hero-stat-val">0円</div><div class="hero-stat-lbl">初期費用</div></div>

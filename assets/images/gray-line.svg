@@ -1,0 +1,105 @@
+<svg id="LINE-WEB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="628" height="12" viewBox="0 0 628 12">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.481" stop-color="#fff"/>
+      <stop offset="0.734" stop-color="#f7f7f7"/>
+      <stop offset="1" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect width="628" height="12" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="LINE" transform="translate(624.576 11.191) rotate(180)">
+    <path id="パス_381" data-name="パス 381" d="M0,0H11.191V624.576H0Z" transform="translate(624.576) rotate(90)" fill="url(#linear-gradient)"/>
+  </g>
+  <g id="LINE-WEB-2" data-name="LINE-WEB" clip-path="url(#clip-path)">
+    <g transform="translate(0 -501)">
+      <rect id="長方形_276" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(22 -501)">
+      <rect id="長方形_276-2" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(44 -501)">
+      <rect id="長方形_276-3" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(66 -501)">
+      <rect id="長方形_276-4" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(88 -501)">
+      <rect id="長方形_276-5" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(110 -501)">
+      <rect id="長方形_276-6" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(132 -501)">
+      <rect id="長方形_276-7" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(154 -501)">
+      <rect id="長方形_276-8" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(176 -501)">
+      <rect id="長方形_276-9" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(198 -501)">
+      <rect id="長方形_276-10" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(220 -501)">
+      <rect id="長方形_276-11" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(242 -501)">
+      <rect id="長方形_276-12" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(264 -501)">
+      <rect id="長方形_276-13" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(286 -501)">
+      <rect id="長方形_276-14" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(308 -501)">
+      <rect id="長方形_276-15" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(330 -501)">
+      <rect id="長方形_276-16" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(352 -501)">
+      <rect id="長方形_276-17" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(374 -501)">
+      <rect id="長方形_276-18" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(396 -501)">
+      <rect id="長方形_276-19" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(418 -501)">
+      <rect id="長方形_276-20" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(440 -501)">
+      <rect id="長方形_276-21" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(462 -501)">
+      <rect id="長方形_276-22" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(484 -501)">
+      <rect id="長方形_276-23" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(506 -501)">
+      <rect id="長方形_276-24" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(528 -501)">
+      <rect id="長方形_276-25" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(550 -501)">
+      <rect id="長方形_276-26" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(572 -501)">
+      <rect id="長方形_276-27" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(594 -501)">
+      <rect id="長方形_276-28" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+    <g transform="translate(616 -501)">
+      <rect id="長方形_276-29" data-name="長方形 276" width="11" height="11" transform="translate(0 501)" fill="#f2f2f2"/>
+    </g>
+  </g>
+</svg>

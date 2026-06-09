@@ -4,1017 +4,538 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>宅配型トランクルームなら「AZUKEL（アズケル）」｜月額200円〜・初期費用ゼロ</title>
-  <meta name="description" content="スマホひとつで荷物を預けられる宅配型トランクルーム「AZUKEL（アズケル）」。月額200円〜、初期費用ゼロ、最短翌日集荷。大型家具もOK。株式会社日本パープル運営。">
+  <meta name="description" content="スマホひとつで荷物を預けられる宅配型トランクルーム。月額200円〜、初期費用ゼロ、最短翌日集荷。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --purple-dark:  #027A3A;
-      --purple:       #06C755;
-      --purple-light: #2EDA72;
-      --purple-pale:  #EDFAF2;
-      --purple-pale2: #D6F5E3;
-      --orange:       #FF6B00;
-      --gold:         #FFD700;
-      --text:         #1A1A1A;
-      --muted:        #555;
-      --light:        #999;
-      --bg:           #F8FDF9;
-      --white:        #FFFFFF;
-      --border:       #D9F0E3;
-      --r:            12px;
-      --r-lg:         24px;
-      --sh:           0 4px 20px rgba(6,199,85,.10);
-      --sh-lg:        0 8px 40px rgba(6,199,85,.16);
+      --green:      #06C755;
+      --green-dark: #027A3A;
+      --green-pale: #EDFAF2;
+      --orange:     #FF6B00;
+      --white:      #fff;
+      --text:       #1A1A1A;
+      --muted:      #555;
     }
-
     html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: #fff; }
+    img  { display: block; width: 100%; }
+    a    { text-decoration: none; color: inherit; }
 
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.7;
-    }
-
-    img { max-width: 100%; }
-    a { color: inherit; }
-
-    /* ─── Campaign Banner ─── */
-    .campaign {
-      background: linear-gradient(90deg, var(--orange) 0%, #FF8C33 100%);
-      color: white;
-      text-align: center;
-      padding: 11px 16px;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: .03em;
-    }
-
-    /* ─── Header ─── */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      padding: 0 24px;
-      background: rgba(255,255,255,.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 38px;
-      height: 38px;
-      background: #06C755;
-      border-radius: 9px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .logo-text {
-      font-size: 22px;
-      font-weight: 900;
-      color: #027A3A;
-      letter-spacing: 3px;
-    }
-
-    .header-nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .nav-link {
-      font-size: 14px;
-      font-weight: 500;
-      text-decoration: none;
-      color: var(--muted);
-      transition: color .2s;
-    }
-
-    .nav-link:hover { color: #06C755; }
-
+    /* ── util ── */
     .btn-orange {
-      background: var(--orange);
-      color: white;
-      border: none;
-      padding: 11px 26px;
-      border-radius: 100px;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--orange); color: #fff;
+      border-radius: 100px; font-weight: 700; cursor: pointer;
       transition: transform .2s, box-shadow .2s;
-      box-shadow: 0 3px 14px rgba(255,107,0,.35);
     }
-
-    .btn-orange:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(255,107,0,.5);
-    }
-
-    /* ─── Hero ─── */
-    .hero {
-      background: linear-gradient(145deg, #EDFAF2 0%, #D6F5E3 45%, #E8FBF0 100%);
-      overflow: hidden;
-    }
-
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 72px 24px 56px;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: white;
-      color: #027A3A;
-      border: 1.5px solid #06C755;
-      border-radius: 100px;
-      padding: 6px 18px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    .hero-h1 {
-      font-size: 44px;
-      font-weight: 900;
-      line-height: 1.32;
-      margin-bottom: 22px;
-    }
-
-    .hero-h1 em {
-      font-style: normal;
-      color: #027A3A;
-    }
-
-    .hero-lead {
-      font-size: 17px;
-      color: var(--muted);
-      line-height: 1.9;
-      margin-bottom: 30px;
-    }
-
-    .hero-checks {
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
-      margin-bottom: 38px;
-    }
-
-    .check-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    .check-icon {
-      width: 22px;
-      height: 22px;
-      background: var(--orange);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 11px;
-      flex-shrink: 0;
-    }
-
-    .hero-cta { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
-
-    .btn-hero {
-      background: var(--orange);
-      color: white;
-      border: none;
-      padding: 20px 52px;
-      border-radius: 100px;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform .2s, box-shadow .2s;
-      box-shadow: 0 6px 24px rgba(255,107,0,.42);
-    }
-
-    .btn-hero:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 32px rgba(255,107,0,.55);
-    }
-
-    .hero-hint { font-size: 13px; color: var(--light); }
-
-    /* Hero Card */
-    .hero-card {
-      background: white;
-      border-radius: var(--r-lg);
-      box-shadow: var(--sh-lg);
-      padding: 28px;
-      width: 100%;
-    }
-
-    .hcard-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #027A3A;
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .hcard-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .hcard-item {
-      background: #EDFAF2;
-      border-radius: 10px;
-      padding: 12px 6px;
-      text-align: center;
-      font-size: 11px;
-      color: #027A3A;
-      font-weight: 500;
-    }
-
-    .hcard-item span { font-size: 26px; display: block; margin-bottom: 5px; }
-
-    .hcard-price {
-      background: linear-gradient(135deg, #027A3A 0%, #06C755 100%);
-      border-radius: 12px;
-      padding: 18px 16px;
-      text-align: center;
-      color: white;
-    }
-
-    .hcard-price-label { font-size: 12px; opacity: .82; margin-bottom: 4px; }
-    .hcard-price-value { font-size: 34px; font-weight: 900; line-height: 1.1; }
-    .hcard-price-sub   { font-size: 13px; opacity: .82; margin-top: 3px; }
-
-    /* ─── Stats Bar ─── */
-    .stats {
-      background: #027A3A;
-      color: white;
-      padding: 28px 24px;
-    }
-
-    .stats-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      text-align: center;
-    }
-
-    .stat-val  { font-size: 30px; font-weight: 900; color: var(--gold); line-height: 1.1; }
-    .stat-lbl  { font-size: 13px; opacity: .82; margin-top: 5px; }
-
-    /* ─── Common Section ─── */
-    .sec { padding: 88px 24px; }
-    .sec-inner { max-width: 1100px; margin: 0 auto; }
-
-    .sec-label {
-      display: inline-block;
-      background: #D6F5E3;
-      color: #027A3A;
-      border-radius: 100px;
-      padding: 6px 18px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .sec-title {
-      font-size: 34px;
-      font-weight: 900;
-      line-height: 1.4;
-      margin-bottom: 12px;
-    }
-
-    .sec-sub {
-      font-size: 16px;
-      color: var(--muted);
-      margin-bottom: 52px;
-    }
-
-    .tc { text-align: center; }
-    .tp { color: #027A3A; }
-
-    /* ─── Features ─── */
-    .features { background: var(--bg); }
-
-    .feat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .feat-card {
-      background: white;
-      border-radius: var(--r);
-      padding: 32px 26px;
-      box-shadow: var(--sh);
-      transition: transform .25s;
-    }
-
-    .feat-card:hover { transform: translateY(-5px); }
-
-    .feat-icon { font-size: 40px; margin-bottom: 14px; display: block; }
-
-    .feat-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .feat-desc { font-size: 14px; color: var(--muted); line-height: 1.85; }
-    .feat-desc strong { color: #027A3A; }
-
-    /* ─── Items ─── */
-    .items-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-
-    .item-card {
-      background: #EDFAF2;
-      border-radius: var(--r);
-      padding: 18px 8px;
-      text-align: center;
-      font-size: 12px;
-      color: #027A3A;
-      font-weight: 500;
-    }
-
-    .item-card span { font-size: 30px; display: block; margin-bottom: 7px; }
-
-    .items-note { text-align: center; font-size: 13px; color: var(--muted); }
-
-    /* ─── How to Use ─── */
-    .howto { background: linear-gradient(160deg, #EDFAF2 0%, white 60%); }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      position: relative;
-    }
-
-    .steps::before {
-      content: '';
-      position: absolute;
-      top: 46px;
-      left: 14%;
-      right: 14%;
-      height: 2px;
-      background: linear-gradient(to right, #D6F5E3, #06C755, #D6F5E3);
-    }
-
-    .step { text-align: center; position: relative; z-index: 1; }
-
-    .step-num {
-      width: 56px;
-      height: 56px;
-      background: var(--purple);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: 900;
-      margin: 0 auto 16px;
-      box-shadow: 0 4px 16px rgba(6,199,85,.35);
-    }
-
-    .step-icon  { font-size: 34px; display: block; margin-bottom: 12px; }
-    .step-title { font-size: 16px; font-weight: 700; color: #027A3A; margin-bottom: 8px; }
-    .step-desc  { font-size: 13px; color: var(--muted); line-height: 1.85; }
-
-    /* ─── Pricing ─── */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    .price-card {
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      box-shadow: var(--sh-lg);
-    }
-
-    .price-head {
-      background: #06C755;
-      color: white;
-      padding: 24px 30px;
-    }
-
-    .price-head.space {
-      background: linear-gradient(135deg, #027A3A, #2EDA72);
-    }
-
-    .price-tag {
-      display: inline-block;
-      background: rgba(255,255,255,.24);
-      border-radius: 100px;
-      padding: 4px 14px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .price-head-title { font-size: 22px; font-weight: 900; margin-bottom: 6px; }
-    .price-head-sub   { font-size: 14px; opacity: .85; }
-
-    .price-body { background: white; padding: 28px 30px; }
-
-    .price-from { font-size: 13px; color: var(--muted); margin-bottom: 2px; }
-
-    .price-amount {
-      font-size: 42px;
-      font-weight: 900;
-      color: #027A3A;
-      line-height: 1.1;
-    }
-
-    .price-unit { font-size: 16px; color: var(--muted); }
-
-    .price-table {
-      width: 100%;
-      margin: 20px 0;
-      border-collapse: collapse;
-      font-size: 13px;
-    }
-
-    .price-table thead th {
-      background: #EDFAF2;
-      color: #027A3A;
-      font-weight: 700;
-      padding: 10px 12px;
-      text-align: left;
-    }
-
-    .price-table tbody td {
-      padding: 10px 12px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .price-table tbody td:last-child { font-weight: 700; color: #027A3A; }
-    .price-table tbody tr:last-child td { border-bottom: none; }
-
-    .price-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-
-    .badge {
-      border-radius: 6px;
-      padding: 4px 10px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .badge-purple { background: #EDFAF2; color: #027A3A; }
-    .badge-orange { background: #FFF0E6; color: var(--orange); }
-
-    .price-note { font-size: 12px; color: var(--light); line-height: 1.8; }
-
-    .sim-link-wrap { text-align: center; margin-top: 36px; }
-
-    .btn-purple {
-      background: var(--purple);
-      color: white;
-      border: none;
-      padding: 17px 44px;
-      border-radius: 100px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform .2s, box-shadow .2s;
-      box-shadow: 0 4px 18px rgba(6,199,85,.38);
-    }
-
-    .btn-purple:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(6,199,85,.5);
-    }
-
-    /* ─── Security ─── */
-    .security { background: var(--bg); }
-
-    .sec-grid4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .sec-card { text-align: center; }
-
-    .sec-icon {
-      width: 80px;
-      height: 80px;
-      background: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      margin: 0 auto 18px;
-      box-shadow: var(--sh);
-    }
-
-    .sec-card-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-    .sec-card-desc  { font-size: 13px; color: var(--muted); line-height: 1.85; }
-
-    /* ─── Company Trust ─── */
-    .trust-bar {
-      background: #EDFAF2;
-      padding: 36px 24px;
-      text-align: center;
-    }
-
-    .trust-bar p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 15px;
-      color: #027A3A;
-      line-height: 1.9;
-    }
-
-    .trust-bar strong { font-weight: 700; }
-
-    /* ─── FAQ ─── */
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      background: white;
-      border-radius: var(--r);
-      border: 1px solid var(--border);
-      overflow: hidden;
-    }
-
-    .faq-q {
-      padding: 20px 24px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 15px;
-      font-weight: 700;
-      user-select: none;
-      gap: 16px;
-    }
-
-    .faq-q-mark { color: #06C755; font-size: 18px; font-weight: 900; flex-shrink: 0; }
-
-    .faq-toggle {
-      width: 28px;
-      height: 28px;
-      background: #D6F5E3;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #027A3A;
-      font-size: 20px;
-      flex-shrink: 0;
-      transition: transform .3s, background .3s;
-      line-height: 1;
-    }
-
-    .faq-item.open .faq-toggle { transform: rotate(45deg); background: #06C755; color: white; }
-
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .35s ease;
-    }
-
-    .faq-item.open .faq-a { max-height: 600px; }
-
-    .faq-a-inner {
-      padding: 16px 24px 22px;
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.9;
-      border-top: 1px solid var(--border);
-    }
-
-    /* ─── Final CTA ─── */
-    .final-cta {
-      background: linear-gradient(135deg, #027A3A 0%, #06C755 55%, #2EDA72 100%);
-      color: white;
-      padding: 96px 24px;
-      text-align: center;
-    }
-
-    .final-cta .sec-label { background: rgba(255,255,255,.2); color: white; }
-
-    .final-cta .sec-title {
-      font-size: 38px;
-      color: white;
-      margin-bottom: 12px;
-    }
-
-    .final-cta .sec-sub {
-      color: rgba(255,255,255,.8);
-      font-size: 18px;
-      margin-bottom: 36px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
+    .btn-orange:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,107,0,.45); }
 
     .btn-white {
-      background: white;
-      color: #027A3A;
-      border: none;
-      padding: 20px 52px;
-      border-radius: 100px;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #fff; color: var(--green-dark);
+      border-radius: 100px; font-weight: 700; cursor: pointer;
       transition: transform .2s, box-shadow .2s;
-      box-shadow: 0 6px 24px rgba(0,0,0,.22);
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+
+    /* ── campaign ── */
+    .campaign {
+      background: var(--orange); color: #fff;
+      text-align: center; padding: 11px 16px;
+      font-size: 14px; font-weight: 700;
     }
 
-    .btn-white:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,.32); }
+    /* ── header ── */
+    .header {
+      position: sticky; top: 0; z-index: 200;
+      height: 62px; display: flex; align-items: center; padding: 0 28px;
+      background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid #E5E5E5;
+    }
+    .header-inner {
+      max-width: 1080px; margin: 0 auto; width: 100%;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 9px; }
+    .logo-box {
+      width: 36px; height: 36px; background: var(--green);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    }
+    .logo-text { font-size: 21px; font-weight: 900; color: var(--green-dark); letter-spacing: 3px; }
+    .header-nav { display: flex; align-items: center; gap: 22px; }
+    .nav-a { font-size: 14px; color: #888; transition: color .2s; }
+    .nav-a:hover { color: var(--green); }
+    .header-btn { padding: 10px 24px; font-size: 14px; }
 
-    .btn-outline {
-      background: transparent;
-      color: white;
+    /* ── hero ── */
+    .hero { position: relative; min-height: 92vh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/images/fv/woman.webp') center/cover no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,.72) 0%, rgba(0,0,0,.45) 55%, rgba(0,0,0,.10) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 1080px; margin: 0 auto; width: 100%;
+      padding: 0 28px 72px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--green); color: #fff;
+      border-radius: 100px; padding: 6px 18px;
+      font-size: 13px; font-weight: 700; margin-bottom: 20px;
+    }
+    .hero-h1 {
+      font-size: 52px; font-weight: 900; color: #fff;
+      line-height: 1.3; margin-bottom: 22px;
+    }
+    .hero-h1 em { font-style: normal; color: #4CFF8A; }
+    .hero-sub { font-size: 18px; color: rgba(255,255,255,.82); line-height: 1.8; margin-bottom: 32px; }
+    .hero-checks { display: flex; flex-direction: column; gap: 11px; margin-bottom: 40px; }
+    .hero-check {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 16px; color: #fff; font-weight: 500;
+    }
+    .check-dot {
+      width: 22px; height: 22px; flex-shrink: 0;
+      background: var(--orange); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: #fff;
+    }
+    .hero-cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .hero-btn { padding: 18px 48px; font-size: 18px; box-shadow: 0 6px 24px rgba(255,107,0,.45); }
+    .hero-note { font-size: 13px; color: rgba(255,255,255,.6); }
+
+    /* hero stats */
+    .hero-stats {
+      position: absolute; bottom: 0; right: 0;
+      display: flex;
+      background: rgba(255,255,255,.1); backdrop-filter: blur(16px);
+      border-radius: 20px 0 0 0; overflow: hidden;
+    }
+    .hero-stat {
+      padding: 20px 28px; text-align: center; color: #fff;
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-val { font-size: 26px; font-weight: 900; color: #4CFF8A; line-height: 1.1; }
+    .hero-stat-lbl { font-size: 11px; opacity: .75; margin-top: 4px; }
+
+    /* ── stats bar ── */
+    .stats-bar { background: var(--green-dark); color: #fff; padding: 26px 28px; }
+    .stats-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; text-align: center;
+    }
+    .stat-val { font-size: 28px; font-weight: 900; color: #FFD700; line-height: 1.1; }
+    .stat-lbl { font-size: 12px; opacity: .8; margin-top: 5px; }
+
+    /* ── section ── */
+    .sec { padding: 88px 28px; }
+    .sec-inner { max-width: 1080px; margin: 0 auto; }
+    .sec-head { text-align: center; margin-bottom: 52px; }
+    .sec-label {
+      display: inline-block; background: var(--green-pale); color: var(--green-dark);
+      border-radius: 100px; padding: 5px 18px;
+      font-size: 13px; font-weight: 700; margin-bottom: 14px;
+    }
+    .sec-title { font-size: 34px; font-weight: 900; line-height: 1.4; margin-bottom: 10px; }
+    .sec-sub { font-size: 15px; color: var(--muted); }
+    .green { color: var(--green-dark); }
+
+    /* ── features ── */
+    .feat-bg { background: #F8F8F8; }
+    .feat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .feat-card {
+      border-radius: 16px; overflow: hidden; background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,.07);
+      transition: transform .25s;
+    }
+    .feat-card:hover { transform: translateY(-5px); }
+    .feat-img { height: 180px; overflow: hidden; position: relative; }
+    .feat-img img { height: 100%; object-fit: cover; transition: transform .4s; }
+    .feat-card:hover .feat-img img { transform: scale(1.05); }
+    .feat-num {
+      position: absolute; top: 14px; left: 14px;
+      width: 34px; height: 34px; background: var(--green);
+      color: #fff; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 900;
+    }
+    .feat-body { padding: 20px 22px 24px; }
+    .feat-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .feat-desc { font-size: 13px; color: var(--muted); line-height: 1.85; }
+    .feat-desc strong { color: var(--green-dark); }
+
+    /* ── items ── */
+    .items-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 12px; margin-bottom: 16px; }
+    .item-card {
+      border-radius: 12px; overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      transition: transform .2s;
+    }
+    .item-card:hover { transform: translateY(-3px); }
+    .item-img { height: 90px; overflow: hidden; }
+    .item-img img { height: 100%; object-fit: cover; }
+    .item-label {
+      background: var(--green-pale); color: var(--green-dark);
+      font-size: 11px; font-weight: 600;
+      text-align: center; padding: 7px 4px;
+    }
+    .items-note { text-align: center; font-size: 13px; color: #999; }
+
+    /* ── steps ── */
+    .steps-bg { background: linear-gradient(160deg, var(--green-pale) 0%, #fff 60%); }
+    .steps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; position: relative; }
+    .steps-grid::before {
+      content: '';
+      position: absolute; top: 90px; left: 13%; right: 13%;
+      height: 2px;
+      background: linear-gradient(to right, #D6F5E3, var(--green), #D6F5E3);
+    }
+    .step { text-align: center; position: relative; z-index: 1; }
+    .step-img {
+      height: 140px; border-radius: 14px; overflow: hidden;
+      margin-bottom: 14px; position: relative;
+      box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    }
+    .step-img img { height: 100%; object-fit: cover; }
+    .step-num-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      width: 44px; height: 44px; background: var(--green);
+      color: #fff; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900;
+      box-shadow: 0 3px 12px rgba(6,199,85,.4);
+    }
+    .step-title { font-size: 15px; font-weight: 700; color: var(--green-dark); margin-bottom: 7px; }
+    .step-desc { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+    /* ── pricing ── */
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .price-card { border-radius: 20px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.12); }
+    .price-head { position: relative; height: 200px; overflow: hidden; }
+    .price-head img { height: 100%; object-fit: cover; }
+    .price-head-overlay {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end;
+      padding: 22px 26px;
+      background: linear-gradient(to top, rgba(2,122,58,.88) 0%, rgba(2,122,58,.3) 60%, transparent 100%);
+      color: #fff;
+    }
+    .price-head-tag {
+      background: rgba(255,255,255,.25); border-radius: 100px;
+      padding: 4px 12px; font-size: 12px; font-weight: 700; margin-bottom: 8px;
+    }
+    .price-head-title { font-size: 22px; font-weight: 900; }
+    .price-head-sub { font-size: 13px; opacity: .85; margin-top: 4px; }
+    .price-body { background: #fff; padding: 26px 28px; }
+    .price-from { font-size: 13px; color: var(--muted); margin-bottom: 2px; }
+    .price-val { font-size: 40px; font-weight: 900; color: var(--green-dark); line-height: 1.1; }
+    .price-unit { font-size: 15px; color: var(--muted); }
+    .price-table { width: 100%; margin: 18px 0; border-collapse: collapse; font-size: 13px; }
+    .price-table thead th {
+      background: var(--green-pale); color: var(--green-dark);
+      font-weight: 700; padding: 9px 12px; text-align: left;
+    }
+    .price-table tbody td { padding: 9px 12px; border-bottom: 1px solid #F0F0F0; }
+    .price-table tbody td:last-child { font-weight: 700; color: var(--green-dark); }
+    .price-table tbody tr:last-child td { border-bottom: none; }
+    .badges { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+    .badge { border-radius: 6px; padding: 4px 10px; font-size: 12px; font-weight: 600; }
+    .badge-g { background: var(--green-pale); color: var(--green-dark); }
+    .badge-o { background: #FFF0E6; color: var(--orange); }
+    .price-note { font-size: 12px; color: #AAA; line-height: 1.8; }
+    .price-cta { text-align: center; margin-top: 32px; }
+    .price-cta a {
+      padding: 16px 44px; font-size: 16px; background: var(--green); color: #fff;
+      border-radius: 100px; font-weight: 700;
+      box-shadow: 0 4px 18px rgba(6,199,85,.38);
+      transition: transform .2s, box-shadow .2s; display: inline-block;
+    }
+    .price-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(6,199,85,.5); }
+
+    /* ── security ── */
+    .security { position: relative; min-height: 480px; display: flex; align-items: center; }
+    .sec-bg-img {
+      position: absolute; inset: 0;
+      background: url('assets/images/triplecrown_sp.jpg') center/cover no-repeat;
+    }
+    .sec-bg-img::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(2,58,25,.78);
+    }
+    .security-content {
+      position: relative; z-index: 1;
+      max-width: 1080px; margin: 0 auto; width: 100%; padding: 72px 28px;
+    }
+    .security .sec-label { background: rgba(255,255,255,.2); color: #fff; }
+    .security .sec-title { color: #fff; }
+    .security .sec-sub   { color: rgba(255,255,255,.75); }
+    .sec-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .sec-card {
+      background: rgba(255,255,255,.1); backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 16px; padding: 28px 20px; text-align: center; color: #fff;
+    }
+    .sec-icon { font-size: 40px; margin-bottom: 14px; }
+    .sec-card-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .sec-card-desc { font-size: 13px; opacity: .8; line-height: 1.8; }
+
+    /* ── trust ── */
+    .trust { background: var(--green-pale); padding: 36px 28px; }
+    .trust p {
+      max-width: 680px; margin: 0 auto; text-align: center;
+      font-size: 15px; color: var(--green-dark); line-height: 1.9;
+    }
+
+    /* ── faq ── */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 800px; margin: 0 auto; }
+    .faq-item { background: #fff; border-radius: 12px; border: 1px solid #E5E5E5; overflow: hidden; }
+    .faq-q {
+      padding: 19px 22px; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      font-size: 15px; font-weight: 700; user-select: none;
+    }
+    .faq-q-mark { color: var(--green); font-size: 18px; font-weight: 900; flex-shrink: 0; }
+    .faq-icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: var(--green-pale); color: var(--green-dark);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 20px; line-height: 1; transition: transform .3s, background .3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--green); color: #fff; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-item.open .faq-a { max-height: 400px; }
+    .faq-a-inner { padding: 16px 22px 20px; font-size: 14px; color: var(--muted); line-height: 1.9; border-top: 1px solid #F0F0F0; }
+
+    /* ── final cta ── */
+    .final-cta { position: relative; padding: 100px 28px; text-align: center; overflow: hidden; }
+    .cta-bg {
+      position: absolute; inset: 0;
+      background: url('assets/images/new/webp/cta_person-sp.webp') center/cover no-repeat;
+    }
+    .cta-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(2,122,58,.92) 0%, rgba(6,199,85,.82) 100%);
+    }
+    .cta-content { position: relative; z-index: 1; color: #fff; }
+    .cta-title { font-size: 38px; font-weight: 900; line-height: 1.4; margin-bottom: 14px; }
+    .cta-title em { font-style: normal; color: #FFD700; }
+    .cta-sub { font-size: 17px; opacity: .85; margin-bottom: 36px; }
+    .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .cta-btn-primary { padding: 20px 52px; font-size: 18px; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+    .cta-btn-outline {
+      display: inline-flex; align-items: center;
+      background: transparent; color: #fff;
       border: 2px solid rgba(255,255,255,.55);
-      padding: 18px 44px;
-      border-radius: 100px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      border-radius: 100px; padding: 18px 44px;
+      font-size: 16px; font-weight: 700; cursor: pointer;
       transition: all .2s;
     }
+    .cta-btn-outline:hover { background: rgba(255,255,255,.15); border-color: #fff; }
+    .cta-contact { font-size: 14px; color: rgba(255,255,255,.7); }
+    .cta-contact a { color: rgba(255,255,255,.9); }
 
-    .btn-outline:hover { background: rgba(255,255,255,.15); border-color: white; }
-
-    .cta-contact { font-size: 14px; color: rgba(255,255,255,.72); }
-    .cta-contact a { color: rgba(255,255,255,.88); }
-
-    /* ─── Footer ─── */
-    .footer {
-      background: #111;
-      color: rgba(255,255,255,.65);
-      padding: 52px 24px 32px;
-    }
-
-    .footer-inner { max-width: 1100px; margin: 0 auto; }
-
+    /* ── footer ── */
+    .footer { background: #111; color: rgba(255,255,255,.6); padding: 52px 28px 32px; }
+    .footer-inner { max-width: 1080px; margin: 0 auto; }
     .footer-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      padding-bottom: 36px;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-      margin-bottom: 28px;
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;
+      padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: 28px;
     }
-
-    .footer-logo { font-size: 24px; font-weight: 900; color: white; letter-spacing: 3px; margin-bottom: 8px; }
+    .footer-logo { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: 3px; margin-bottom: 8px; }
     .footer-info { font-size: 13px; line-height: 1.9; }
-
     .footer-links { display: flex; gap: 40px; }
+    .link-g-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .link-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .link-list a { font-size: 13px; color: rgba(255,255,255,.5); transition: color .2s; }
+    .link-list a:hover { color: #fff; }
+    .footer-bottom { text-align: center; font-size: 12px; color: rgba(255,255,255,.35); }
 
-    .link-group-title { font-size: 14px; font-weight: 700; color: white; margin-bottom: 12px; }
-
-    .link-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-
-    .link-list a {
-      font-size: 13px;
-      color: rgba(255,255,255,.55);
-      text-decoration: none;
-      transition: color .2s;
-    }
-
-    .link-list a:hover { color: white; }
-
-    .footer-bottom { text-align: center; font-size: 12px; color: rgba(255,255,255,.4); }
-
-    /* ─── Animations ─── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-
+    /* ── reveal ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s, transform .65s; }
     .reveal.in { opacity: 1; transform: translateY(0); }
 
-    /* ─── Responsive ─── */
+    /* ── responsive ── */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 52px 20px 44px; }
-      .hero-h1 { font-size: 34px; }
-      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .hero-h1 { font-size: 36px; }
       .feat-grid { grid-template-columns: 1fr 1fr; }
-      .items-grid { grid-template-columns: repeat(4, 1fr); }
-      .steps { grid-template-columns: 1fr 1fr; }
-      .steps::before { display: none; }
+      .items-grid { grid-template-columns: repeat(4,1fr); }
+      .steps-grid { grid-template-columns: 1fr 1fr; }
+      .steps-grid::before { display: none; }
       .pricing-grid { grid-template-columns: 1fr; }
-      .sec-grid4 { grid-template-columns: 1fr 1fr; }
+      .sec-cards { grid-template-columns: 1fr 1fr; }
       .footer-top { flex-direction: column; }
-      .footer-links { gap: 28px; }
-      .sec-title { font-size: 28px; }
-      .final-cta .sec-title { font-size: 30px; }
+      .hero-stats { display: none; }
+      .stats-inner { grid-template-columns: 1fr 1fr; }
     }
-
     @media (max-width: 600px) {
-      .header-nav .nav-link { display: none; }
+      .header-nav .nav-a { display: none; }
       .feat-grid { grid-template-columns: 1fr; }
-      .items-grid { grid-template-columns: repeat(3, 1fr); }
-      .steps { grid-template-columns: 1fr; }
-      .sec-grid4 { grid-template-columns: 1fr; }
+      .items-grid { grid-template-columns: repeat(3,1fr); }
+      .steps-grid { grid-template-columns: 1fr 1fr; }
+      .sec-cards { grid-template-columns: 1fr 1fr; }
       .cta-buttons { flex-direction: column; align-items: center; }
-    }
-
-    @media (max-width: 400px) {
-      .items-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-h1 { font-size: 30px; }
+      .sec-title { font-size: 26px; }
+      .cta-title { font-size: 28px; }
     }
   </style>
 </head>
 <body>
 
-<!-- Campaign Banner -->
-<div class="campaign">
-  🎉 今なら全プラン3ヶ月30%OFFキャンペーン実施中！&nbsp;まずは無料で会員登録を。
-</div>
+<!-- Campaign -->
+<div class="campaign">🎉 今なら全プラン3ヶ月30%OFFキャンペーン実施中！</div>
 
 <!-- Header -->
 <header class="header">
   <div class="header-inner">
     <a href="https://www.azukel.com/" class="logo">
-      <div class="logo-mark">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M12 3 L4 8 L4 21 L20 21 L20 8 Z" fill="white" opacity=".9"/>
-          <rect x="9" y="15" width="6" height="6" rx="1" fill="white" opacity=".6"/>
-        </svg>
-      </div>
-      <span class="logo-text">AZUKEL</span>
+      <img src="assets/images/logo.png" alt="AZUKEL" style="height:40px;width:auto;">
     </a>
     <nav class="header-nav">
-      <a href="#features" class="nav-link">特徴</a>
-      <a href="#pricing" class="nav-link">料金</a>
-      <a href="#faq" class="nav-link">FAQ</a>
-      <a href="https://www.azukel.com/" class="btn-orange">無料で始める →</a>
+      <a href="#features" class="nav-a">特徴</a>
+      <a href="#pricing" class="nav-a">料金</a>
+      <a href="#faq" class="nav-a">FAQ</a>
+      <a href="https://www.azukel.com/" class="btn-orange header-btn">無料で始める →</a>
     </nav>
   </div>
 </header>
 
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow">
-        <span>📦</span> 宅配型トランクルーム
-      </div>
-      <h1 class="hero-h1">
-        スマホひとつで、<br>
-        <em>荷物を預けて</em><br>
-        部屋を広くしよう。
-      </h1>
-      <p class="hero-lead">
-        自宅から一歩も出ずに預けられる。<br>集荷から管理・取り出しまでLINEで完結。
-      </p>
-      <ul class="hero-checks">
-        <li class="check-item">
-          <div class="check-icon">✓</div>
-          <span>初期費用ゼロ・月額<strong>200円〜</strong>の業界最安級</span>
-        </li>
-        <li class="check-item">
-          <div class="check-icon">✓</div>
-          <span>集荷送料無料・最短<strong>翌日</strong>対応</span>
-        </li>
-        <li class="check-item">
-          <div class="check-icon">✓</div>
-          <span>アプリ不要。<strong>LINEだけ</strong>で完結</span>
-        </li>
-        <li class="check-item">
-          <div class="check-icon">✓</div>
-          <span>大型家具・家電もOK（スペースプラン）</span>
-        </li>
-      </ul>
-      <div class="hero-cta">
-        <a href="https://www.azukel.com/" class="btn-hero">今すぐ無料で始める &rarr;</a>
-        <p class="hero-hint">※ 登録無料・30秒で完了・クレカ不要</p>
-      </div>
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">📦 宅配型トランクルーム</div>
+    <h1 class="hero-h1">スマホひとつで、<br><em>荷物を預けて</em><br>部屋を広くしよう。</h1>
+    <p class="hero-sub">自宅から一歩も出ずに預けられる。<br>取り出しもLINEで依頼するだけ。</p>
+    <ul class="hero-checks">
+      <li class="hero-check"><div class="check-dot">✓</div>初期費用ゼロ・月額<strong>200円〜</strong>の業界最安級</li>
+      <li class="hero-check"><div class="check-dot">✓</div>集荷送料無料・最短<strong>翌日</strong>対応</li>
+      <li class="hero-check"><div class="check-dot">✓</div>アプリ不要・<strong>LINEだけ</strong>で完結</li>
+      <li class="hero-check"><div class="check-dot">✓</div>大型家具・家電もOK（スペースプラン）</li>
+    </ul>
+    <div class="hero-cta">
+      <a href="https://www.azukel.com/" class="btn-orange hero-btn">今すぐ無料で始める →</a>
+      <p class="hero-note">※ 登録無料・30秒で完了・クレカ不要</p>
     </div>
-    <div>
-      <div class="hero-card">
-        <p class="hcard-title">📦 こんな荷物を預けられます</p>
-        <div class="hcard-grid">
-          <div class="hcard-item"><span>👗</span>衣類</div>
-          <div class="hcard-item"><span>👟</span>靴・バッグ</div>
-          <div class="hcard-item"><span>📚</span>本・書類</div>
-          <div class="hcard-item"><span>🧳</span>スーツケース</div>
-          <div class="hcard-item"><span>⛳</span>ゴルフ用品</div>
-          <div class="hcard-item"><span>🛋️</span>大型家具</div>
-        </div>
-        <div class="hcard-price">
-          <p class="hcard-price-label">箱プラン（全国対応）</p>
-          <p class="hcard-price-value">¥200<small style="font-size:17px">/月〜</small></p>
-          <p class="hcard-price-sub">預け入れ送料無料・日割り計算</p>
-        </div>
-      </div>
-    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-val">¥200〜</div><div class="hero-stat-lbl">月額保管料</div></div>
+    <div class="hero-stat"><div class="hero-stat-val">0円</div><div class="hero-stat-lbl">初期費用</div></div>
+    <div class="hero-stat"><div class="hero-stat-val">翌日〜</div><div class="hero-stat-lbl">最短集荷</div></div>
+    <div class="hero-stat"><div class="hero-stat-val">50年</div><div class="hero-stat-lbl">保管実績</div></div>
   </div>
 </section>
 
 <!-- Stats Bar -->
-<div class="stats">
+<div class="stats-bar">
   <div class="stats-inner">
-    <div>
-      <p class="stat-val">¥200<small style="font-size:17px">/月〜</small></p>
-      <p class="stat-lbl">業界最安級の保管料金</p>
-    </div>
-    <div>
-      <p class="stat-val">0円</p>
-      <p class="stat-lbl">初期費用・預け入れ送料</p>
-    </div>
-    <div>
-      <p class="stat-val">最短翌日</p>
-      <p class="stat-lbl">集荷対応スピード</p>
-    </div>
-    <div>
-      <p class="stat-val">50年</p>
-      <p class="stat-lbl">日本パープルの保管実績</p>
-    </div>
+    <div><p class="stat-val">¥200〜</p><p class="stat-lbl">業界最安級の保管料金</p></div>
+    <div><p class="stat-val">0円</p><p class="stat-lbl">初期費用・預け入れ送料</p></div>
+    <div><p class="stat-val">最短翌日</p><p class="stat-lbl">集荷対応スピード</p></div>
+    <div><p class="stat-val">50年</p><p class="stat-lbl">日本パープルの保管実績</p></div>
   </div>
 </div>
 
 <!-- Features -->
-<section class="sec features" id="features">
+<section class="sec feat-bg" id="features">
   <div class="sec-inner">
-    <div class="tc">
+    <div class="sec-head">
       <span class="sec-label">選ばれる理由</span>
-      <h2 class="sec-title">AZUKELが<span class="tp">コスパ最強</span>と<br>言われる6つの理由</h2>
-      <p class="sec-sub">自社保管施設を運営するから、他社比<strong>約半額</strong>を実現。品質も妥協しません。</p>
+      <h2 class="sec-title">AZUKELが<span class="green">コスパ最強</span>と<br>言われる6つの理由</h2>
+      <p class="sec-sub">自社保管施設を運営するから、他社比<strong>約半額</strong>を実現。</p>
     </div>
     <div class="feat-grid reveal">
       <div class="feat-card">
-        <span class="feat-icon">📱</span>
-        <h3 class="feat-title">スマホ・LINEだけで完結</h3>
-        <p class="feat-desc">専用アプリは不要。会員登録から集荷依頼、荷物確認、取り出しまですべてスマホとLINEで完結。<strong>登録は30秒</strong>、料金確認も15秒です。</p>
+        <div class="feat-img"><img src="assets/images/new/webp/point1-sp.webp" alt="LINEで完結"><div class="feat-num">1</div></div>
+        <div class="feat-body"><h3 class="feat-title">📱 スマホ・LINEだけで完結</h3><p class="feat-desc">専用アプリは不要。会員登録から集荷・取り出しまですべてLINEで完結。<strong>登録30秒</strong>。</p></div>
       </div>
       <div class="feat-card">
-        <span class="feat-icon">💰</span>
-        <h3 class="feat-title">業界最安級・初期費用ゼロ</h3>
-        <p class="feat-desc">自社保管施設の運営で<strong>他社比約半額</strong>を実現。月額200円〜・初期費用ゼロ。日割り計算だから月途中から始めても損しません。</p>
+        <div class="feat-img"><img src="assets/images/new/webp/point2-sp.webp" alt="業界最安級"><div class="feat-num">2</div></div>
+        <div class="feat-body"><h3 class="feat-title">💰 業界最安級・初期費用ゼロ</h3><p class="feat-desc">自社施設運営で<strong>他社比約半額</strong>を実現。月額200円〜、日割り計算で無駄なし。</p></div>
       </div>
       <div class="feat-card">
-        <span class="feat-icon">🚚</span>
-        <h3 class="feat-title">集荷送料・スペースプラン取り出し無料</h3>
-        <p class="feat-desc">預け入れ時の集荷送料は<strong>完全無料</strong>。スペースプランは2025年6月より取り出し送料も<strong>永年0円</strong>（同一住所への配送）。</p>
+        <div class="feat-img"><img src="assets/images/new/webp/point3-sp.webp" alt="集荷送料無料"><div class="feat-num">3</div></div>
+        <div class="feat-body"><h3 class="feat-title">🚚 集荷送料・取り出し無料</h3><p class="feat-desc">預け入れ集荷は<strong>完全無料</strong>。スペースプランは取り出し送料も<strong>永年0円</strong>。</p></div>
       </div>
       <div class="feat-card">
-        <span class="feat-icon">🏢</span>
-        <h3 class="feat-title">自社施設の徹底した環境管理</h3>
-        <p class="feat-desc">温度<strong>25℃以下・湿度65%以下</strong>を24時間365日維持。有人管理・機械警備・監視カメラで大切な荷物をしっかりお守りします。</p>
+        <div class="feat-img"><img src="assets/images/new/webp/reason-sp.webp" alt="自社施設管理"><div class="feat-num">4</div></div>
+        <div class="feat-body"><h3 class="feat-title">🏢 自社施設の徹底した環境管理</h3><p class="feat-desc">温度<strong>25℃以下・湿度65%以下</strong>を24時間365日維持。有人管理＋機械警備。</p></div>
       </div>
       <div class="feat-card">
-        <span class="feat-icon">📷</span>
-        <h3 class="feat-title">荷物を写真で1点ずつ管理</h3>
-        <p class="feat-desc">預けた荷物はすべて<strong>写真撮影・採寸（無料）</strong>。いつでもスマホから確認できるので「どの箱に入れたっけ？」がなくなります。</p>
+        <div class="feat-img"><img src="assets/images/new/webp/comparison-sp.webp" alt="写真管理"><div class="feat-num">5</div></div>
+        <div class="feat-body"><h3 class="feat-title">📷 荷物を写真で1点ずつ管理</h3><p class="feat-desc">預けた荷物はすべて<strong>写真撮影・採寸（無料）</strong>。スマホからいつでも確認OK。</p></div>
       </div>
       <div class="feat-card">
-        <span class="feat-icon">📦</span>
-        <h3 class="feat-title">1箱〜大型家具まで柔軟対応</h3>
-        <p class="feat-desc">小さな段ボール1箱からベッド・ソファ・冷蔵庫など<strong>大型家具・家電</strong>（スペースプラン）まで。ライフスタイルに合わせて選べます。</p>
+        <div class="feat-img"><img src="assets/images/new/webp/monthly_fee_person-sp.webp" alt="大型家具対応"><div class="feat-num">6</div></div>
+        <div class="feat-body"><h3 class="feat-title">📦 1箱〜大型家具まで対応</h3><p class="feat-desc">段ボール1箱からベッド・ソファ・冷蔵庫など<strong>大型家具・家電</strong>（スペースプラン）まで。</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Accepted Items -->
+<!-- Items -->
 <section class="sec">
   <div class="sec-inner">
-    <div class="tc">
+    <div class="sec-head">
       <span class="sec-label">預けられるもの</span>
-      <h2 class="sec-title">こんな荷物、<span class="tp">全部預けられます</span></h2>
-      <p class="sec-sub">季節もの・趣味グッズ・大型家具まで。「捨てたくないけど今は不要」な物の保管に最適です。</p>
+      <h2 class="sec-title">こんな荷物、<span class="green">全部預けられます</span></h2>
+      <p class="sec-sub">季節もの・趣味グッズ・大型家具まで幅広く対応。</p>
     </div>
     <div class="items-grid reveal">
-      <div class="item-card"><span>👗</span>衣類・アパレル</div>
-      <div class="item-card"><span>👟</span>靴・スニーカー</div>
-      <div class="item-card"><span>👜</span>バッグ・かばん</div>
-      <div class="item-card"><span>📚</span>本・漫画・雑誌</div>
-      <div class="item-card"><span>🧳</span>スーツケース</div>
-      <div class="item-card"><span>⛳</span>ゴルフ用品</div>
-      <div class="item-card"><span>❄️</span>季節家電</div>
-      <div class="item-card"><span>🏄</span>スポーツ用品</div>
-      <div class="item-card"><span>🎸</span>趣味・コレクション</div>
-      <div class="item-card"><span>🛋️</span>ソファ・家具</div>
-      <div class="item-card"><span>🛏️</span>ベッド・布団</div>
-      <div class="item-card"><span>🧸</span>おもちゃ・雑貨</div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item1.webp" alt="衣類"></div><div class="item-label">衣類・アパレル</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item2.webp" alt="靴"></div><div class="item-label">靴・スニーカー</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item3.webp" alt="バッグ"></div><div class="item-label">バッグ・かばん</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item4.webp" alt="本"></div><div class="item-label">本・漫画・雑誌</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item5.webp" alt="スーツケース"></div><div class="item-label">スーツケース</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item6.webp" alt="ゴルフ"></div><div class="item-label">ゴルフ用品</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item7.webp" alt="季節家電"></div><div class="item-label">季節家電</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item8.webp" alt="スポーツ"></div><div class="item-label">スポーツ用品</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item9.webp" alt="趣味"></div><div class="item-label">趣味・コレクション</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item10.webp" alt="ソファ"></div><div class="item-label">ソファ・家具</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item11.webp" alt="ベッド"></div><div class="item-label">ベッド・布団</div></div>
+      <div class="item-card"><div class="item-img"><img src="assets/images/item/webp/item12.webp" alt="おもちゃ"></div><div class="item-label">おもちゃ・雑貨</div></div>
     </div>
-    <p class="items-note">※ ソファ・ベッドなど大型家具・家電はスペースプラン（東京・神奈川・千葉・埼玉）のみ対応</p>
+    <p class="items-note">※ ソファ・ベッドなど大型家具はスペースプラン（東京・神奈川・千葉・埼玉）のみ対応</p>
   </div>
 </section>
 
-<!-- How to Use -->
-<section class="sec howto">
+<!-- Steps -->
+<section class="sec steps-bg">
   <div class="sec-inner">
-    <div class="tc">
+    <div class="sec-head">
       <span class="sec-label">使い方</span>
-      <h2 class="sec-title">4ステップで<span class="tp">かんたん利用</span></h2>
-      <p class="sec-sub">面倒な手続きは一切なし。最短翌日には集荷に伺います。</p>
+      <h2 class="sec-title">4ステップで<span class="green">かんたん利用</span></h2>
+      <p class="sec-sub">面倒な手続き一切なし。最短翌日には集荷に伺います。</p>
     </div>
-    <div class="steps reveal">
+    <div class="steps-grid reveal">
       <div class="step">
-        <div class="step-num">1</div>
-        <span class="step-icon">✉️</span>
+        <div class="step-img"><div class="step-num-badge">1</div><img src="assets/images/new/flow_tel_step01.png" alt="メール登録"></div>
         <h3 class="step-title">メール登録（30秒）</h3>
-        <p class="step-desc">メールアドレスだけで完了。クレカ不要、面倒な入力はありません。</p>
+        <p class="step-desc">メールアドレスだけ。クレカ不要、30秒で完了します。</p>
       </div>
       <div class="step">
-        <div class="step-num">2</div>
-        <span class="step-icon">🧮</span>
+        <div class="step-img"><div class="step-num-badge">2</div><img src="assets/images/new/flow_tel_step02.png" alt="料金確認"></div>
         <h3 class="step-title">料金シミュレーション</h3>
-        <p class="step-desc">預けたい荷物を選ぶだけ。15秒で月々の料金が即確認できます。</p>
+        <p class="step-desc">預けたい荷物を選ぶだけ。15秒で月額料金が確認できます。</p>
       </div>
       <div class="step">
-        <div class="step-num">3</div>
-        <span class="step-icon">📅</span>
+        <div class="step-img"><div class="step-num-badge">3</div><img src="assets/images/new/flow_tel_step03.png" alt="集荷予約"></div>
         <h3 class="step-title">集荷日時を予約</h3>
-        <p class="step-desc">最短翌日から。午前・午後など4つの時間帯から好きな枠を選択。</p>
+        <p class="step-desc">最短翌日から。4つの時間帯からお選びください。</p>
       </div>
       <div class="step">
-        <div class="step-num">4</div>
-        <span class="step-icon">📱</span>
+        <div class="step-img"><div class="step-num-badge">4</div><img src="assets/images/new/flow_line_step01.png" alt="LINE取り出し"></div>
         <h3 class="step-title">LINEで取り出し依頼</h3>
-        <p class="step-desc">必要になったらLINEで依頼するだけ。写真一覧から選んで取り出せます。</p>
+        <p class="step-desc">必要になったらLINEで依頼。写真一覧から選ぶだけ。</p>
       </div>
     </div>
   </div>
@@ -1023,77 +544,54 @@
 <!-- Pricing -->
 <section class="sec" id="pricing">
   <div class="sec-inner">
-    <div class="tc">
+    <div class="sec-head">
       <span class="sec-label">料金プラン</span>
-      <h2 class="sec-title">シンプルで<span class="tp">わかりやすい料金</span></h2>
-      <p class="sec-sub">初期費用ゼロ・日割り計算。預けた分だけお支払いいただくシンプルな仕組みです。</p>
+      <h2 class="sec-title">シンプルで<span class="green">わかりやすい料金</span></h2>
+      <p class="sec-sub">初期費用ゼロ・日割り計算。預けた分だけのシンプルな仕組みです。</p>
     </div>
     <div class="pricing-grid reveal">
-      <!-- 箱プラン -->
       <div class="price-card">
         <div class="price-head">
-          <span class="price-tag">🌏 全国対応</span>
-          <h3 class="price-head-title">📦 箱プラン</h3>
-          <p class="price-head-sub">段ボールを送るだけで気軽にスタート</p>
+          <img src="assets/images/new/box-visual.png" alt="箱プラン">
+          <div class="price-head-overlay">
+            <div class="price-head-tag">🌏 全国対応</div>
+            <div class="price-head-title">📦 箱プラン</div>
+            <div class="price-head-sub">段ボールを送るだけで気軽にスタート</div>
+          </div>
         </div>
         <div class="price-body">
           <p class="price-from">月額</p>
-          <p class="price-amount">¥200<span class="price-unit">〜（税込）</span></p>
+          <p class="price-val">¥200<span class="price-unit">〜（税込）</span></p>
           <table class="price-table">
-            <thead>
-              <tr>
-                <th>サイズ</th>
-                <th>寸法</th>
-                <th>月額料金</th>
-              </tr>
-            </thead>
+            <thead><tr><th>サイズ</th><th>寸法</th><th>月額</th></tr></thead>
             <tbody>
-              <tr>
-                <td>レギュラー</td>
-                <td>42×30×35cm</td>
-                <td>¥200</td>
-              </tr>
-              <tr>
-                <td>アパレル</td>
-                <td>84×35×17.5cm</td>
-                <td>¥260</td>
-              </tr>
-              <tr>
-                <td>ラージ</td>
-                <td>71×35×33.5cm</td>
-                <td>¥440</td>
-              </tr>
+              <tr><td>レギュラー</td><td>42×30×35cm</td><td>¥200</td></tr>
+              <tr><td>アパレル</td><td>84×35×17.5cm</td><td>¥260</td></tr>
+              <tr><td>ラージ</td><td>71×35×33.5cm</td><td>¥440</td></tr>
             </tbody>
           </table>
-          <div class="price-badges">
-            <span class="badge badge-purple">✓ 預け入れ送料無料</span>
-            <span class="badge badge-purple">✓ 日割り計算</span>
-            <span class="badge badge-orange">⚡ 全国対応</span>
+          <div class="badges">
+            <span class="badge badge-g">✓ 預け入れ送料無料</span>
+            <span class="badge badge-g">✓ 日割り計算</span>
+            <span class="badge badge-o">⚡ 全国対応</span>
           </div>
-          <p class="price-note">
-            ※ 取り出し送料：1箱1,100円（税込）<br>
-            ※ 最低保管期間：90日<br>
-            ※ 180日以内取り出し時は追加料金あり
-          </p>
+          <p class="price-note">※ 取り出し送料：1箱1,100円（税込）／最低保管期間：90日</p>
         </div>
       </div>
-      <!-- スペースプラン -->
       <div class="price-card">
-        <div class="price-head space">
-          <span class="price-tag">🗼 一都三県限定</span>
-          <h3 class="price-head-title">🏠 スペースプラン</h3>
-          <p class="price-head-sub">大型家具・家電まで預けられる広いスペース</p>
+        <div class="price-head">
+          <img src="assets/images/new/space-visual-sp.png" alt="スペースプラン">
+          <div class="price-head-overlay">
+            <div class="price-head-tag">🗼 一都三県限定</div>
+            <div class="price-head-title">🏠 スペースプラン</div>
+            <div class="price-head-sub">大型家具・家電まで預けられる広いスペース</div>
+          </div>
         </div>
         <div class="price-body">
           <p class="price-from">月額</p>
-          <p class="price-amount">¥1,900<span class="price-unit">〜（税込）</span></p>
+          <p class="price-val">¥1,900<span class="price-unit">〜（税込）</span></p>
           <table class="price-table">
-            <thead>
-              <tr>
-                <th>スペース</th>
-                <th>月額料金</th>
-              </tr>
-            </thead>
+            <thead><tr><th>スペース</th><th>月額料金</th></tr></thead>
             <tbody>
               <tr><td>0.1畳</td><td>¥1,900</td></tr>
               <tr><td>0.5畳</td><td>¥7,200</td></tr>
@@ -1102,158 +600,72 @@
               <tr><td>3.0畳</td><td>¥27,480</td></tr>
             </tbody>
           </table>
-          <div class="price-badges">
-            <span class="badge badge-purple">✓ 預け入れ送料無料</span>
-            <span class="badge badge-orange">🎁 取り出し永年0円</span>
-            <span class="badge badge-purple">✓ 大型家具OK</span>
+          <div class="badges">
+            <span class="badge badge-g">✓ 預け入れ送料無料</span>
+            <span class="badge badge-o">🎁 取り出し永年0円</span>
+            <span class="badge badge-g">✓ 大型家具OK</span>
           </div>
-          <p class="price-note">
-            ※ 対象エリア：東京・神奈川・千葉・埼玉<br>
-            ※ 2025年6月〜 取り出し送料が永年0円（同一住所）<br>
-            ※ 最低保管期間：90日
-          </p>
+          <p class="price-note">※ 対象：東京・神奈川・千葉・埼玉 ／ 最低保管期間：90日</p>
         </div>
       </div>
     </div>
-    <div class="sim-link-wrap">
-      <p style="font-size:15px;color:var(--muted);margin-bottom:16px">実際の月額料金を今すぐシミュレーション</p>
-      <a href="https://www.azukel.com/simulation/" class="btn-purple">料金シミュレーションを試す →</a>
-    </div>
+    <div class="price-cta"><a href="https://www.azukel.com/simulation/">料金シミュレーションを試す →</a></div>
   </div>
 </section>
 
 <!-- Security -->
-<section class="sec security">
-  <div class="sec-inner">
-    <div class="tc">
+<section class="security">
+  <div class="sec-bg-img"></div>
+  <div class="security-content">
+    <div class="sec-head">
       <span class="sec-label">安心・安全</span>
-      <h2 class="sec-title">大切な荷物を<span class="tp">プロが守ります</span></h2>
-      <p class="sec-sub">保管のプロ・日本パープルが最高水準の管理体制でお預かりします。</p>
+      <h2 class="sec-title">大切な荷物を<span style="color:#4CFF8A;">プロが守ります</span></h2>
+      <p class="sec-sub">50年の実績を持つ日本パープルが最高水準の管理体制でお預かりします。</p>
     </div>
-    <div class="sec-grid4 reveal">
-      <div class="sec-card">
-        <div class="sec-icon">🌡️</div>
-        <h3 class="sec-card-title">温湿度管理</h3>
-        <p class="sec-card-desc">温度25℃以下・<br>湿度65%以下を<br>24時間365日維持</p>
-      </div>
-      <div class="sec-card">
-        <div class="sec-icon">👮</div>
-        <h3 class="sec-card-title">有人管理</h3>
-        <p class="sec-card-desc">スタッフが常駐し、<br>お客様の荷物を<br>丁寧に管理</p>
-      </div>
-      <div class="sec-card">
-        <div class="sec-icon">📹</div>
-        <h3 class="sec-card-title">24時間監視</h3>
-        <p class="sec-card-desc">監視カメラ・センサーで<br>施設全体を<br>常時モニタリング</p>
-      </div>
-      <div class="sec-card">
-        <div class="sec-icon">🔒</div>
-        <h3 class="sec-card-title">機械警備</h3>
-        <p class="sec-card-desc">最新の機械警備で<br>不正侵入を<br>24時間シャットアウト</p>
-      </div>
+    <div class="sec-cards reveal">
+      <div class="sec-card"><div class="sec-icon">🌡️</div><h3 class="sec-card-title">温湿度管理</h3><p class="sec-card-desc">温度25℃以下・湿度65%以下を24時間365日維持</p></div>
+      <div class="sec-card"><div class="sec-icon">👮</div><h3 class="sec-card-title">有人管理</h3><p class="sec-card-desc">スタッフ常駐で大切な荷物を丁寧に管理</p></div>
+      <div class="sec-card"><div class="sec-icon">📹</div><h3 class="sec-card-title">24時間監視</h3><p class="sec-card-desc">監視カメラ・センサーで施設を常時モニタリング</p></div>
+      <div class="sec-card"><div class="sec-icon">🔒</div><h3 class="sec-card-title">機械警備</h3><p class="sec-card-desc">最新の機械警備で不正侵入を24時間防止</p></div>
     </div>
   </div>
 </section>
 
-<!-- Trust Bar -->
-<div class="trust-bar">
-  <p>
-    運営会社の<strong>株式会社日本パープル</strong>は、機密書類の保管・廃棄を中心に<strong>50年以上</strong>の実績を持つ保管のプロ集団。<br>
-    自社保管施設を運営するからこそ実現できる、高品質・低価格なサービスをご提供します。
-  </p>
+<!-- Trust -->
+<div class="trust">
+  <p><strong>株式会社日本パープル</strong>は機密書類の保管・廃棄を中心に<strong>50年以上</strong>の実績を持つ保管のプロ集団。自社保管施設を運営するからこそ実現できる、高品質・低価格なサービスをご提供します。</p>
 </div>
 
 <!-- FAQ -->
 <section class="sec" id="faq">
   <div class="sec-inner">
-    <div class="tc">
+    <div class="sec-head">
       <span class="sec-label">よくある質問</span>
-      <h2 class="sec-title">お客様からの<span class="tp">よくある質問</span></h2>
-      <p class="sec-sub">ご不明な点はお気軽にお問い合わせください。</p>
+      <h2 class="sec-title">お客様からの<span class="green">よくある質問</span></h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">
-          <span><span class="faq-q-mark">Q</span>&nbsp; 初期費用はかかりますか？</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">初期費用は一切かかりません。月々の保管料金のみで、預け入れ時の集荷送料も無料です。最初にかかる費用はゼロから始められます。</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span><span class="faq-q-mark">Q</span>&nbsp; 最短でいつ集荷してもらえますか？</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">最短翌日から集荷に伺います。集荷の時間帯は午前・12〜16時・15〜18時・18〜21時の4枠から選択できます。</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span><span class="faq-q-mark">Q</span>&nbsp; どんなものでも預けられますか？</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">衣類・靴・バッグ・本・スーツケースなどの日用品から、ゴルフ用品・季節家電まで幅広く対応しています。大型家具・家電はスペースプラン（一都三県限定）のみ対応です。危険物・食品・生き物などお預かりできないものもございます。詳細は公式サイトでご確認ください。</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span><span class="faq-q-mark">Q</span>&nbsp; アプリのインストールは必要ですか？</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">専用アプリは不要です。会員登録・集荷依頼・荷物確認・取り出し依頼まで、すべてスマホとLINEだけで完結します。</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span><span class="faq-q-mark">Q</span>&nbsp; 最低利用期間はありますか？</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">最低保管期間は90日です。また、入庫から180日以内に取り出す場合は、通常の取り出し送料に加えて、預け入れ時の送料相当額が追加請求されます。半年以上の長期保管をお考えの方に特におすすめです。</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span><span class="faq-q-mark">Q</span>&nbsp; スペースプランの対応エリアは？</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">スペースプランは東京・神奈川・千葉・埼玉の一都三県が対象です。箱プランは全国どこでもご利用いただけます。</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span><span class="faq-q-mark">Q</span>&nbsp; 取り出した荷物はどのように返送されますか？</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">LINEで取り出し依頼をいただくと、ご自宅へ宅配便でお届けします。スペースプランは同一住所への返送であれば取り出し送料が永年0円です（2025年6月〜）。箱プランは1箱1,100円（税込）です。</div>
-        </div>
-      </div>
+      <div class="faq-item"><div class="faq-q"><span><span class="faq-q-mark">Q</span>&nbsp;初期費用はかかりますか？</span><div class="faq-icon">+</div></div><div class="faq-a"><div class="faq-a-inner">初期費用は一切かかりません。月々の保管料金のみで、預け入れ時の集荷送料も無料です。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span><span class="faq-q-mark">Q</span>&nbsp;最短でいつ集荷してもらえますか？</span><div class="faq-icon">+</div></div><div class="faq-a"><div class="faq-a-inner">最短翌日から集荷に伺います。午前・12〜16時・15〜18時・18〜21時の4枠から選択できます。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span><span class="faq-q-mark">Q</span>&nbsp;アプリのインストールは必要ですか？</span><div class="faq-icon">+</div></div><div class="faq-a"><div class="faq-a-inner">専用アプリは不要です。会員登録から集荷・取り出しまで、すべてスマホとLINEだけで完結します。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span><span class="faq-q-mark">Q</span>&nbsp;最低利用期間はありますか？</span><div class="faq-icon">+</div></div><div class="faq-a"><div class="faq-a-inner">最低保管期間は90日です。入庫から180日以内の取り出しは、通常の取り出し送料に加えて、預け入れ時の送料相当額が追加請求されます。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span><span class="faq-q-mark">Q</span>&nbsp;スペースプランの対応エリアは？</span><div class="faq-icon">+</div></div><div class="faq-a"><div class="faq-a-inner">スペースプランは東京・神奈川・千葉・埼玉の一都三県が対象です。箱プランは全国対応しています。</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span><span class="faq-q-mark">Q</span>&nbsp;どんなものでも預けられますか？</span><div class="faq-icon">+</div></div><div class="faq-a"><div class="faq-a-inner">衣類・靴・バッグ・本・スーツケースなどの日用品から、ゴルフ用品・季節家電まで幅広く対応。大型家具・家電はスペースプランのみ対応です。危険物・食品などはお預かりできません。</div></div></div>
     </div>
   </div>
 </section>
 
 <!-- Final CTA -->
 <section class="final-cta">
-  <span class="sec-label">今すぐ始める</span>
-  <h2 class="sec-title" style="margin-bottom:12px">
-    部屋をスッキリさせて、<br><span style="color:var(--gold)">ゆとりのある暮らし</span>へ。
-  </h2>
-  <p class="sec-sub">初期費用ゼロ・登録30秒。まずは料金シミュレーションをお試しください。</p>
-  <div class="cta-buttons">
-    <a href="https://www.azukel.com/" class="btn-white">無料で会員登録する &rarr;</a>
-    <a href="https://www.azukel.com/simulation/" class="btn-outline">料金を確認する</a>
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">部屋をスッキリさせて、<br><em>ゆとりのある暮らし</em>へ。</h2>
+    <p class="cta-sub">初期費用ゼロ・登録30秒。まずは料金シミュレーションをお試しください。</p>
+    <div class="cta-buttons">
+      <a href="https://www.azukel.com/" class="btn-white cta-btn-primary">無料で会員登録する →</a>
+      <a href="https://www.azukel.com/simulation/" class="cta-btn-outline">料金を確認する</a>
+    </div>
+    <p class="cta-contact">お電話：<a href="tel:0367446983">03-6744-6983</a>（11〜18時）&nbsp;｜&nbsp;メール：<a href="mailto:azukel@purple.co.jp">azukel@purple.co.jp</a></p>
   </div>
-  <p class="cta-contact">
-    お電話でのお問い合わせ：<a href="tel:0367446983">03-6744-6983</a>（11〜18時）&nbsp;｜&nbsp;
-    メール：<a href="mailto:azukel@purple.co.jp">azukel@purple.co.jp</a>
-  </p>
 </section>
 
 <!-- Footer -->
@@ -1270,7 +682,7 @@
       </div>
       <div class="footer-links">
         <div>
-          <p class="link-group-title">サービス</p>
+          <p class="link-g-title">サービス</p>
           <ul class="link-list">
             <li><a href="https://www.azukel.com/lp/service/">サービス紹介</a></li>
             <li><a href="https://www.azukel.com/guide.html">ご利用ガイド</a></li>
@@ -1278,36 +690,29 @@
           </ul>
         </div>
         <div>
-          <p class="link-group-title">会社情報</p>
+          <p class="link-g-title">会社情報</p>
           <ul class="link-list">
             <li><a href="https://www.mamoru-kun.com/">株式会社日本パープル</a></li>
-            <li><a href="https://www.azukel.com/">アズケル公式サイト</a></li>
+            <li><a href="https://www.azukel.com/">公式サイト</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 株式会社日本パープル All Rights Reserved.</p>
-    </div>
+    <div class="footer-bottom">© 株式会社日本パープル All Rights Reserved.</div>
   </div>
 </footer>
 
 <script>
-  // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
       const item = q.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
+      const open = item.classList.contains('open');
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      if (!open) item.classList.add('open');
     });
   });
-
-  // Scroll reveal
-  const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
